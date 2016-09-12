@@ -20,7 +20,21 @@ def hello_world(request):
         'current_time': str(datetime.now()),
     })
 
+
+#@csrf_exempt
+# def post_data(request):
+#    try:
+#        print("" + request.body)
+#    except Exception as inst:
+#        print("error",inst)
+#    return HttpResponse(request.body, content_type='application/json')
 @csrf_exempt
 def post_data(request):
-    print(request.body)
-    return HttpResponse(request.body, content_type='application/json')
+    responseData = 'default'
+    if request.method == 'GET':
+        responseData = request.path
+        print("url : " + request.path)
+    else:
+        responseData = request.body
+        print("body : ", request.body)
+    return HttpResponse(responseData, content_type='application/json')

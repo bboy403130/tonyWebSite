@@ -20,5 +20,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^hello/$', hello_world),
-    url(r'^post/$', post_data),
+    url(r'^post_get_test/$', post_data),
 ]
