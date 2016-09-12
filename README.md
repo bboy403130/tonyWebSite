@@ -1,11 +1,8 @@
 # tonyWebSite
 
 first python web porject
-<ul>
-*  Red
-*  Green
-*  Blue
-*  myproject
+<h2>
+myproject
    post_get_data is a simple http simulator
 
-</ul>
+</h2>
